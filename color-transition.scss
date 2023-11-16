@@ -1,0 +1,27 @@
+@use 'sass:color';
+@use 'sass:math';
+$base-color:plum;
+body{
+    margin: 0;
+}
+div.column{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    & > div{
+        border: thin solid black;
+        box-sizing: border-box;
+        flex: 1;
+    }
+    @mixin color-columns($n){
+        @for $i from 1 through $n{
+            $color: color.adjust($base-color,$hue:math.div(360,$n - 1)*($i - 1 ));
+            & > div:nth-child(#{$i}){
+                background-color: $color;
+            }
+            & > div:nth-child(#{$i})::before{
+                content: "#{$color}";
+            }
+        }
+    }
+}
