@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        form{
+            display: flex;
+            justify-content: center;
+        }
+        table.sudoku{
+            border-collapse: collapse;
+            border: 3px solid;
+        }
+        table.sudoku tr td{
+            border: 1px solid;
+            width: 50px;
+            height: 50px;
+        }
+        table tr:nth-child(3n) td,table tr:nth-child(3n+3) td{
+            border-bottom: 3px solid;
+        }
+        table tr td:nth-child(3n),table tr td:nth-child(3n+3){
+            border-right: 3px solid black;
+        }
+        .col01,.col12,.col23,.col34,.col45,.col56,.col67,.col78,.col89,
+        .col09,.col18,.col27,.col36,.col45,.col54,.col63,.col72,.col81{
+            background-color: yellow;
+        }
+        table tr td:nth-child(5n){
+            background-color: rgb(7, 252, 43);
+        }
+        table tr:nth-child(5n) td{
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Sudoku</h1>
+    <form action="post">
+        <table class="sudoku">
+            <tbody>
+                <tr class="row">
+                    <td class="col01"></td>
+                    <td class="col02"></td>
+                    <td class="col03"></td>
+                    <td class="col04"></td>
+                    <td class="col05"></td>
+                    <td class="col06"></td>
+                    <td class="col07"></td>
+                    <td class="col08"></td>
+                    <td class="col09"></td>
+                </tr>
+                <tr class="row">
+                    <td class="col11"></td>
+                    <td class="col12"></td>
+                    <td class="col13"></td>
+                    <td class="col14"></td>
+                    <td class="col15"></td>
+                    <td class="col16"></td>
+                    <td class="col17"></td>
+                    <td class="col18"></td>
+                    <td class="col19"></td>
+                </tr>
+                <tr class="row">
+                    <td class="col21"></td>
+                    <td class="col22"></td>
+                    <td class="col23"></td>
+                    <td class="col24"></td>
+                    <td class="col25"></td>
+                    <td class="col26"></td>
+                    <td class="col27"></td>
+                    <td class="col28"></td>
+                    <td class="col29"></td>
+                </tr>
+                <tr class="row">
+                    <td class="col31"></td>
+                    <td class="col32"></td>
+                    <td class="col33"></td>
+                    <td class="col34"></td>
+                    <td class="col35"></td>
+                    <td class="col36"></td>
+                    <td class="col37"></td>
+                    <td class="col38"></td>
+                    <td class="col39"></td>
+                </tr>
+                <tr class="row">
+                    <td class="col41"></td>
+                    <td class="col42"></td>
+                    <td class="col43"></td>
+                    <td class="col44"></td>
+                    <td class="col45"></td>
+                    <td class="col46"></td>
+                    <td class="col47"></td>
+                    <td class="col48"></td>
+                    <td class="col49"></td>
+                </tr>
+                <tr class="row">
+                    <td class="col51"></td>
+                    <td class="col52"></td>
+                    <td class="col53"></td>
+                    <td class="col54"></td>
+                    <td class="col55"></td>
+                    <td class="col56"></td>
+                    <td class="col57"></td>
+                    <td class="col58"></td>
+                    <td class="col59"></td>
+                </tr>
+                <tr class="row">
+                    <td class="col61"></td>
+                    <td class="col62"></td>
+                    <td class="col63"></td>
+                    <td class="col64"></td>
+                    <td class="col65"></td>
+                    <td class="col66"></td>
+                    <td class="col67"></td>
+                    <td class="col68"></td>
+                    <td class="col69"></td>
+                </tr>
+                <tr class="row">
+                    <td class="col71"></td>
+                    <td class="col72"></td>
+                    <td class="col73"></td>
+                    <td class="col74"></td>
+                    <td class="col75"></td>
+                    <td class="col76"></td>
+                    <td class="col77"></td>
+                    <td class="col78"></td>
+                    <td class="col79"></td>
+                </tr>
+                <tr class="row">
+                    <td class="col81"></td>
+                    <td class="col82"></td>
+                    <td class="col83"></td>
+                    <td class="col84"></td>
+                    <td class="col85"></td>
+                    <td class="col86"></td>
+                    <td class="col87"></td>
+                    <td class="col88"></td>
+                    <td class="col89"></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>
